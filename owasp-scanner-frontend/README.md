@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# CyberPulse Scanner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CyberPulse Scanner is a web-based vulnerability scanning tool designed to help users quickly identify security risks in websites. It offers both simulated and real scan modes and emphasizes safe, ethical scanning practices.
 
-## Available Scripts
+⚠️ Disclaimer
 
-In the project directory, you can run:
+This tool should only be used on websites you own or have explicit permission to test.
 
-### `npm start`
+The developers are not responsible for any misuse.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1.**Modern UI**: Dark-themed interface with neon accents.
 
-### `npm test`
+2. **Scan Modes**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Simulated Scan: Generates sample vulnerabilities for learning/demo purposes.
 
-### `npm run build`
+    Real Scan: Connects to backend API for real vulnerability scanning.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Progress Tracking**: Visual progress bar while scanning.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Scan Results**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Security score calculation
 
-### `npm run eject`
+    Detailed list of vulnerabilities with severity, description, and recommendations
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    JSON and PDF report downloads
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **User Consent**: Ethical scanning consent modal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. **User Management & History**: Firestore integration to save scans per user
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+7. **Responsive Design** : Works on desktop and mobile
 
-## Learn More
+# Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Frontend**: React, TailwindCSS, Framer Motion, Lucide Icons
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Backend**: Node.js, Express
 
-### Code Splitting
+**Database**: Firebase Firestore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**HTTP Client**: Axios
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="1337" height="576" alt="image" src="https://github.com/user-attachments/assets/cf750275-f26d-47d5-8708-8a4c974cda4b" />
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="1338" height="509" alt="image" src="https://github.com/user-attachments/assets/a314c469-784c-4da8-8721-a0fbccc9ebb7" />
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<img width="1343" height="588" alt="image" src="https://github.com/user-attachments/assets/d09a014a-43c9-46ea-8c43-090b2018cb0a" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<img width="1337" height="577" alt="image" src="https://github.com/user-attachments/assets/01bf1453-aefb-4a99-8802-aaae688cdc84" />
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="1328" height="587" alt="image" src="https://github.com/user-attachments/assets/a2a1a817-d0b3-4cb7-876b-d9ba4eafe4f0" />
+
+<img width="1325" height="586" alt="image" src="https://github.com/user-attachments/assets/468d818b-9654-4a8a-b38b-b90508e138c9" />
+
+
+<img width="1326" height="591" alt="image" src="https://github.com/user-attachments/assets/d5a8458f-530e-4f7c-9f3d-97f06a1c1857" />
+
+
+
+
+
+
+
