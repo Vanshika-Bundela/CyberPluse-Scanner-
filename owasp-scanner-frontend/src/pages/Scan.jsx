@@ -193,7 +193,7 @@ const Scan = () => {
   setResults({ url, score, vulnerabilities: fakeResults });
 } else {
         try {
-          const res = await axios.post("http://localhost:5000/api/scan", {
+          const res = await axios.post("https://cyberpluse-scanner.onrender.com/api/scan", {
             url,
             apiKey: "demo-key-123",
             allowActive: true,
@@ -226,7 +226,7 @@ const Scan = () => {
 
   const downloadReport = (fileUrl) => {
     const link = document.createElement("a");
-    link.href = `http://localhost:5000${fileUrl}`;
+    link.href = `https://cyberpluse-scanner.onrender.com/${fileUrl}`;
     link.download = fileUrl.split("/").pop();
     link.click();
   };
