@@ -11,13 +11,16 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "http://localhost:3000" })); // react dev origin
+// ✅ Trust proxy for Render (fixes X-Forwarded-For warning)
+app.set("trust proxy", 1);
+
+app.use(cors({ origin: "*" })); // Allow all origins for now
 app.use(bodyParser.json());
 
 // Serve static reports
 app.use("/reports", express.static(path.join(__dirname, "reports")));
 
-// Rate limiting (simple)
+// Rate limiting
 const limiter = rateLimit({
   windowMs: 60 * 1000,
   max: 10,
@@ -25,10 +28,10 @@ const limiter = rateLimit({
 });
 app.use("/api/scan", limiter);
 
-// Scan route
+// Routes
 app.use("/api/scan", scanRoutes);
 
-// simple root
-app.get("/", (req, res) => res.send("CyberPulse Scanner backend running"));
+// Root route
+app.get("/", (req, res) => res.send("CyberPulse Scanner backend running "));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
