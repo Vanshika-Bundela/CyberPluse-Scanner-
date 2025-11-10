@@ -81,11 +81,101 @@ const Scan = () => {
 
       let finalResults = null;
 
-      if (mode === "simulated") {
-        // Simulated results
-        const fakeResults = [
-          /* ... same fakeResults as before ... */
-        ];
+     if (mode === "simulated") {
+  const fakeResults = [
+    {
+      name: "Broken Access Control",
+      severity: "Critical",
+      color: "text-red-500",
+      description:
+        "Access control restrictions are not enforced properly, allowing attackers to act as other users.",
+      recommendation:
+        "Implement proper role-based access control and validate user privileges on the server side.",
+    },
+    {
+      name: "Cryptographic Failures",
+      severity: "High",
+      color: "text-orange-400",
+      description:
+        "Sensitive data such as passwords or tokens are not encrypted or use weak cryptography.",
+      recommendation:
+        "Use modern encryption standards (AES, RSA), enforce HTTPS, and never store plaintext credentials.",
+    },
+    {
+      name: "Injection",
+      severity: "High",
+      color: "text-orange-400",
+      description:
+        "Untrusted input is passed directly into queries or commands, allowing data or code injection.",
+      recommendation:
+        "Use parameterized queries, ORM sanitization, and validate all inputs before using them.",
+    },
+    {
+      name: "Insecure Design",
+      severity: "Medium",
+      color: "text-yellow-400",
+      description:
+        "The application lacks secure design patterns and fails to consider security from the ground up.",
+      recommendation:
+        "Adopt secure design principles like threat modeling and defense-in-depth during the design phase.",
+    },
+    {
+      name: "Security Misconfiguration",
+      severity: "Medium",
+      color: "text-yellow-400",
+      description:
+        "Default configurations, open admin panels, or exposed error messages are left unprotected.",
+      recommendation:
+        "Harden all configurations, disable unused features, and hide system details from users.",
+    },
+    {
+      name: "Vulnerable and Outdated Components",
+      severity: "High",
+      color: "text-orange-400",
+      description:
+        "The application uses outdated libraries or components with known security vulnerabilities.",
+      recommendation:
+        "Regularly update dependencies, use vulnerability scanning tools, and apply patches promptly.",
+    },
+    {
+      name: "Identification and Authentication Failures",
+      severity: "Critical",
+      color: "text-red-500",
+      description:
+        "Improper session handling or weak authentication allows unauthorized access to user accounts.",
+      recommendation:
+        "Implement MFA, secure cookies, session timeouts, and avoid credential reuse.",
+    },
+    {
+      name: "Software and Data Integrity Failures",
+      severity: "Medium",
+      color: "text-yellow-400",
+      description:
+        "Software updates or CI/CD pipelines do not verify integrity, leading to potential tampering.",
+      recommendation:
+        "Digitally sign code and verify integrity before deployment; secure CI/CD environments.",
+    },
+    {
+      name: "Security Logging and Monitoring Failures",
+      severity: "Low",
+      color: "text-green-400",
+      description:
+        "Insufficient logging and monitoring prevent timely detection of attacks or breaches.",
+      recommendation:
+        "Implement centralized logging, intrusion detection, and alerting for suspicious activity.",
+    },
+    {
+      name: "Server-Side Request Forgery (SSRF)",
+      severity: "Medium",
+      color: "text-yellow-400",
+      description:
+        "The application fetches external resources without validating user input, leading to internal exposure.",
+      recommendation:
+        "Validate and whitelist URLs, block internal network calls, and use network-level protections.",
+    },
+  ];
+
+  // Calculate score dynamically (lower for critical issues)
 
         const score =
           100 -
